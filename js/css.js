@@ -16,14 +16,14 @@ function toggleDropdown(dropdownId) {
 
         // Displaying Navigation
         const navElement = document.querySelector('.nav');
-        const navHTML = `
-            <ul class="gul">
-                <li class="lipop"><a href="./index.html" class="alibo">home</a></li>
-                <li class="lipop"><a href=".about.html" class="alibo">about me</a></li>
-                <li class="lipop"><a href="./accomp.html" class="alibo">accomplishment</a></li>
-                <li class="lipop"><a href="./favorite.html" class="alibo">my favorite</a></li>
-                <li class="lipop"><a href="./contact.html" class="alibo">contact</a></li>
-            </ul>
-        `;
+        const navHTML = 
+        <ul class="nav__gul">
+        <li class="nav__gul__lipop"><a href="./index.html" class="nav__gul__alibo">home</a></li>
+        <li  class="nav__gul__lipop"><a href="./about.html" class="nav__gul__alibo">about me</a></li>
+        <li  class="nav__gul__lipop"><a href="./accomp.html" class="nav__gul__alibo">accomplishment</a></li>
+        <li  class="nav__gul__lipop"><a href="./favorite.html" class="nav__gul__alibo"> my favorite</a></li>
+        <li  class="nav__gul__lipop"><a href="./contact.html" class="nav__gul__alibo">contact</a></li>
+    </ul>
+            `;
         navElement.innerHTML = navHTML;
   
