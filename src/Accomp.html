@@ -1,72 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>accomplishment</title>
+    <link rel="stylesheet" href="output.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Candal&family=Lora&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6909f688b3.js" crossorigin="anonymous"></script>
     
-    <script src="https://kit.fontawesome.com/6909f688b3.js" crossorigin="anonymous"></script> 
 </head>
-<body>
-    <header class="header">
-        <div class="menu">
-            <a href="accomp.html" title="about" class="dropdown"><i class="fa fa-bars"></i></a> 
-            <nav class="conte">
-                <ul class="jilo">
-                    <li class="lili"><a href="../index.html" class="lino">home</a></li>
-                    <li class="lili"><a href="about.html"  class="lino">about me</a></li>
-                  
-                    <li class="lili"><a href="accomp.html"  class="lino">accomplishment</a></li>
-                    <li class="lili"><a href="favorite.html"  class="lino">my favorite</a></li>
-                    <li class="lili"><a href="contact.html"  class="lino">contact</a></li>
+<div class="bg-red-600">
+
+    <div class="flex items-center justify-end">
+        <div class="menu relative">
+            <input type="checkbox" id="menuToggle" class="hidden">
+            <label for="menuToggle" class="dropdown">
+                <i class="fa fa-bars"></i>
+            </label>
+            <nav class="menu-content hidden absolute right-0 w-40 py-2 mt-2 bg-white shadow-md">
+                <ul class="flex flex-col space-y-2 px-4">
+                    <li class="hover:bg-gray-100"><a href="./index.html" class="text-gray-700 hover:text-gray-900">home</a></li>
+                    <li class="hover:bg-gray-100"><a href=".about.html" class="text-gray-700 hover:text-gray-900">about me</a></li>
+                    <li class="hover:bg-gray-100"><a href="./accomp.html" class="text-gray-700 hover:text-gray-900">accomplishment</a></li>
+                    <li class="hover:bg-gray-100"><a href="./favorite.html" class="text-gray-700 hover:text-gray-900">my favorite</a></li>
+                    <li class="hover:bg-gray-100"><a href="./contact.html" class="text-gray-700 hover:text-gray-900">contact</a></li>
                 </ul>
-            </nav>  
-          
+            </nav>
         </div>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuContent = document.querySelector('.menu-content');
+
+        menuToggle.addEventListener('change', function() {
+            if (this.checked) {
+                menuContent.classList.remove('hidden');
+            } else {
+                menuContent.classList.add('hidden');
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!menuContent.contains(event.target) && !menuToggle.contains(event.target)) {
+                menuToggle.checked = false;
+                menuContent.classList.add('hidden');
+            }
+        });
+    </script>
+           
         <div class="logo">
-            <h1 class="logo-txt"> <span class="span">Bori</span>Fan</h1>
+            <h1 class="logo-txt text-5xl font-bold"><span class="span">Bori</span>Fan</h1>
         </div>
-       
+      
+        <nav class="nav hidden md:flex md:flex-row-reverse">
+          <ul class="gul flex space-x-4">
+              <li class="lipop"><a href="./index.html" class="alibo">home</a></li>
+              <li class="lipop"><a href=".about.html" class="alibo">about me</a></li>
+              <li class="lipop"><a href="./accomp.html" class="alibo">accomplishment</a></li>
+              <li class="lipop"><a href="./favorite.html" class="alibo">my favorite</a></li>
+              <li class="lipop"><a href="./contact.html" class="alibo">contact</a></li>
+          </ul>
+      </nav>
+    </nav>
     </header>
-    <main class="accomp">
-        <section class="sidhus">
-            <h1 class="acch1">Leadership and development</h1>
-            <p class="accopar">
-                I have been participated in leadership and development  education for the  previous year and I have got a lot of experience. 
-                and  that was  the best  time which I motivated and finally I get certified with this cerificate and  you can learn  if you intersted location is 5 kilo.
-                Here is the highlights fo it 
+</div>
+<main class="bg-gray-100 py-10">
+<main class="accomp py-10">
+        <section class="sidhus container mx-auto">
+            <div class="flex">
+                <figure class="jobpic mt-8 w-200">
+                    <img src="./images/my certificate.jpg" width="text-gray-900" height="text-blue-500" alt="photo of certificate" class="accoimg1">
+                    <figcaption class="accfigcap">certificate of Achievement</figcaption>
+                </figure>
+                <aside class="bg-white-200 ml-20">
+            <h1 class="acch1 text-3xl text-green-500 font-bold">Leadership and development</h1>
+            <p class="accopar mt-4 w-1/3">
+                I have been participated in leadership and development education for the previous year and I have got a lot of experience. 
+                and that was the best time which I motivated and finally I get certified with this certificate and you can learn if you interested location is 5 kilo.
+                Here is the highlights for it 
                 Transformational leadership is a leadership style that focuses on inspiring and motivating followers to reach their full potential. It involves charismatic leadership qualities and a clear vision for the future.
-                 <a href="https://politicalscienceblog.com/the-purpose-driven-life-rick-warren/"  class="gol" target="_blank"> Details</a>
+                <a href="https://politicalscienceblog.com/the-purpose-driven-life-rick-warren/" class="gol text-blue-500" target="_blank">Details</a>
             </p>
-            <figure class="jobpic">
-                <img src="/images/my certificate.jpg" width="300px" height="300px"  alt="photo of certificate" class="accoimg1">
-                <figcaption class="accfigcap">certificate of completion</figcaption>
-            </figure>
-           
+        </aside>
         </section>
-        <section class="jobber">
-            <h1  class="acch1">Course Completion certificate</h1>
-            <p class="accopar">Cisco is a renowned multinational technology company specializing in networking hardware, software, and telecommunications equipment.  By successfully completing Cisco training courses and earning Course Completion Certificates, I  demonstrate my proficiency in Cisco technologies, validating their expertise in areas such as network security, routing and switching, wireless technologies, and more. These certificates serve as a testament to their dedication and commitment to staying at the forefront of networking advancements and enhance their professional credibility, opening doors to new career opportunities in the dynamic field of information technology.
-                <a href="https://www.credly.com/badges/7d9d9f15-e2a3-4de3-bbbd-2a773601085a/public_url"  class="gol" target="_blank">see more...</a>
-            </p>
-            <figure class="sidpic">
-                <img src="/images/Bikila TarikuAbate-Fundamentals of -certificate.jpg" alt="photo ceritificate" class="accoimg1">
-                <figcaption class="accfigcap">certificate of achievement</figcaption>
-            </figure>
-           
-        </section>
-    </main>
-   
-    <footer class="footer">
-        <div class="footer-copy"><i class="far fa-copyright">Bikila Tariku/AAiT</i></div>
-        <div class="footer-icon">
-            <ul class="fotul">
-                <li class="fotlin">
-                    <a href="https://www.facebook.com/me/" title="facebook" class="fb" target="_blank"><i class="fab fa-facebook">fb</i></a></li>
-                <li  class="fotlin"><a  href="https://t.me/FFO100" title="telegram" class="tel" target="_blank"><i class="fab fa-telegram">Tg</i></a></li>
-               
         </div>
-    </footer>
+        <div class="flex">
+      
+        <figure class="sidpic mt-8 w-1/3">
+            <img src="./images/Bikila TarikuAbate-Fundamentals of -certificate.jpg" alt="photo certificate" 
+            class="accoimg1">
+            <figcaption class="accfigcap">certificate of completion</figcaption>
+        </figure>
+        <aside class="bg-white-200 ml-20">
+        <section class="jobber container mx-auto">
+            <h1 class="acch1 text-3xl text-green-500 font-bold">Course Completion certificate</h1>
+            <p class="accopar mt-4 w-1/3">Cisco is a renowned multinational technology company specializing in networking hardware, software, and telecommunications equipment. By successfully completing Cisco training courses and earning Course Completion Certificates, I demonstrate my proficiency in Cisco technologies, validating their expertise in areas such as network security, routing and switching, wireless technologies, and more. These certificates serve as a testament to their dedication and commitment to staying at the forefront of networking advancements and enhance their professional credibility, opening doors to new career opportunities in the dynamic field of information technology.
+                <a href="https://www.credly.com/badges/7d9d9f15-e2a3-4de3-bbbd-2a773601085a/public_url" class="gol text-blue-500" target="_blank">see more...</a>
+            </p>
+            
+        </section>
+       </aside>
+    </div>
+    </main>
+</main>
+    <footer class="footer bg-gray-800 py-4 px-6 text-white">
+      <div class="footer-copy">&copy; Bikila Tariku/AAiT</div>
+      <div class="footer-icon flex justify-end">
+          <ul class="fotul flex space-x-4">
+              <li class="fotlin">
+                  <a href="https://www.facebook.com/me/" title="facebook" class="fb" target="_blank"><i class="fab fa-facebook" style="font-size: 1.5em;"></i></a>
+              </li>
+              <li class="fotlin">
+                  <a href="https://t.me/FFO100" title="telegram" class="tel" target="_blank"><i class="fab fa-telegram" style="font-size: 1.5em;"></i></a>
+              </li>
+          </ul>
+      </div>
+  </footer>
 </body>
 </html>

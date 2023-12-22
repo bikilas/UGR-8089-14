@@ -1,77 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> About me</title>
+    <title>about</title>
+    
+    <link rel="stylesheet" href="output.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Candal&family=Lora&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6909f688b3.js" crossorigin="anonymous"></script>
+    
 </head>
-<body>
-    <header class="header">
-        <div class="menu">
-            <a href="about.html" title="vision" class="dropdown"><i class="fa fa-bars"></i></a>   
-            <nav class="conte">
-                <ul class="jilo">
-                    <li class="lili"><a href="../index.html" class="lino">home</a></li>
-                    <li class="lili"><a href="about.html"  class="lino">about me</a></li>
-                    <li class="lili"><a href="accomp.html"  class="lino">accomplishment</a></li>
-                    <li class="lili"><a href="favorite.html"  class="lino">my favorite</a></li>
-                    <li class="lili"><a href="contact.html"  class="lino">contact</a></li>
+<div class="bg-red-600">
+ <div class="flex items-center justify-end">
+        <div class="menu relative">
+            <input type="checkbox" id="menuToggle" class="hidden">
+            <label for="menuToggle" class="dropdown">
+                <i class="fa fa-bars"></i>
+            </label>
+            <nav class="menu-content hidden absolute right-0 w-40 py-2 mt-2 bg-white shadow-md">
+                <ul class="flex flex-col space-y-2 px-4">
+                    <li class="hover:bg-gray-100"><a href="./index.html" class="text-gray-700 hover:text-gray-900">home</a></li>
+                    <li class="hover:bg-gray-100"><a href=".about.html" class="text-gray-700 hover:text-gray-900">about me</a></li>
+                    <li class="hover:bg-gray-100"><a href="./accomp.html" class="text-gray-700 hover:text-gray-900">accomplishment</a></li>
+                    <li class="hover:bg-gray-100"><a href="./favorite.html" class="text-gray-700 hover:text-gray-900">my favorite</a></li>
+                    <li class="hover:bg-gray-100"><a href="./contact.html" class="text-gray-700 hover:text-gray-900">contact</a></li>
                 </ul>
-            </nav>  
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuContent = document.querySelector('.menu-content');
+
+        menuToggle.addEventListener('change', function() {
+            if (this.checked) {
+                menuContent.classList.remove('hidden');
+            } else {
+                menuContent.classList.add('hidden');
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!menuContent.contains(event.target) && !menuToggle.contains(event.target)) {
+                menuToggle.checked = false;
+                menuContent.classList.add('hidden');
+            }
+        });
+    </script>
            
-         </div>
         <div class="logo">
-            <h1 class="logo-txt"> <span class="span">Bori</span>Fan</h1>
+            <h1 class="logo-txt text-5xl font-bold"><span class="span">Bori</span>Fan</h1>
         </div>
-    </header> 
-     <section>
-        <div class="container">
-            
-            <figure class="aboutpic">
-                <img src="/images/ambas.jpg" alt="photo of me" class="aboimg">
-                <figcaption class="abtfigcap"> photo taken on my way to Addis</figcaption>
-            </figure>
-        
-            <aside class="abtaside">
-                <h1 class="h1">My Story</h1>
-                <p class="odd">
-                    I'm thrilled to share a little bit about myself. Currently,
-              I am a  third year Software Engneering student at AAU, where I am immersing 
-              myself in the fascinating world of technology and its applications. 
-              My passion for problem-solving and innovation led me to pursue this field, 
-              and I am constantly amazed by the endless possibilities it offers.<br>
-         
+      
+        <nav class="nav hidden md:flex md:flex-row-reverse">
+            <ul class="gul flex space-x-4">
+                <li class="lipop"><a href="./index.html" class="alibo">home</a></li>
+                <li class="lipop"><a href=".about.html" class="alibo">about me</a></li>
+                <li class="lipop"><a href="./accomp.html" class="alibo">accomplishment</a></li>
+                <li class="lipop"><a href="./favorite.html" class="alibo">my favorite</a></li>
+                <li class="lipop"><a href="./contact.html" class="alibo">contact</a></li>
+            </ul>
+        </nav>
 
-                 <br>Throughout my academic journey, I have developed intermediate knowledge 
-                 in web development, allowing me to create dynamic and user-friendly websites.
-                 I have also delved into Java development, where I've gained a strong understanding 
-                 of object-oriented programming and its practical applications. 
+    </header>
+</div>
+    <section class="bg-gray-100 py-1">
+        <div class="container mx-auto px-4 flex flex-wrap">
+<main class="flex">
+    
+    <figure class="aboutpic">
+        <img src="./images/ambas.jpg" alt="photo of me" class="aboimg w-200 h-300 mt-20">
+        <figcaption class="abtfigcap "> photo taken on my way to Addis</figcaption>
+    </figure>
 
-                 <br>I believe that technology has the power to transform lives and make a positive impact. 
-                 I am driven to leverage my skills and knowledge to create solutions that address real-world 
-                 challenges and enhance user experiences. I am always eager to learn and stay up-to-date 
-                 with the latest advancements in the industry, as I believe continuous learning is 
-                 crucial in this fast-paced field.
+    <aside class="abtaside w-full md: scroll-mr-20 md:pl-6">
+        <h1 class="h1 text-3xl font-bold mb-5 first-letter: text-red-600 ml-20">My Story</h1>
+        <p class="odd ml-20 ">
+            I'm thrilled to share a little bit about myself. Currently,
+            I am a third-year Software Engineering student at AAU, where I am immersing
+            myself in the fascinating world of technology and its applications.
+            My passion for problem-solving and innovation led me to pursue this field,
+            and I am constantly amazed by the endless possibilities it offers.<br>
+            <br>Throughout my academic journey, I have developed intermediate knowledge
+            in web development, allowing me to create dynamic and user-friendly websites.
+            I have also delved into Java development, where I've gained a strong understanding
+            of object-oriented programming and its practicalapplications.
 
-                   
-                </p>
-            </aside>
-        </div>
+            <br>I believe that technology has the power to transform lives and make a positive impact.
+            I am driven to leverage my skills and knowledge to create solutions that address real-world
+            challenges and enhance user experiences. I am always eager to learn and stay up-to-date
+            with the latest advancements in the industry, as I believe continuous learning is
+            crucial in this fast-paced field.
+
+
+        </p>
+    </aside>
+</div>
+</main>
 
     </section>
-   
-   
-    <footer class="footer">
-        <div class="footer-copy"><i class="far fa-copyright">Bikila Tariku/AAiT</i></div>
-        <div class="footer-icon">
-            <ul class="fotul">
+    <footer class="footer bg-gray-800 py-4 px-6 text-white">
+        <div class="footer-copy">&copy; Bikila Tariku/AAiT</div>
+        <div class="footer-icon flex justify-end">
+            <ul class="fotul flex space-x-4">
                 <li class="fotlin">
-                    <a href="https://www.facebook.com/me/" title="facebook" class="fb" target="_blank"><i class="fab fa-facebook">Fb</i></a></li>
-                <li  class="fotlin"><a  href="https://t.me/FFO100" title="telegram" class="tel" target="_blank"><i class="fab fa-telegram">Tg</i></a></li>
-               
+                    <a href="https://www.facebook.com/me/" title="facebook" class="fb" target="_blank"><i class="fab fa-facebook" style="font-size: 1.5em;"></i></a>
+                </li>
+                <li class="fotlin">
+                    <a href="https://t.me/FFO100" title="telegram" class="tel" target="_blank"><i class="fab fa-telegram" style="font-size: 1.5em;"></i></a>
+                </li>
+            </ul>
         </div>
     </footer>
 </body>
+
 </html>

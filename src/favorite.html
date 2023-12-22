@@ -1,92 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>favorite</title>
+    
+    <link rel="stylesheet" href="output.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Candal&family=Lora&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6909f688b3.js" crossorigin="anonymous"></script>
-    </head>
+    
+</head>
 <body>
-    <header class="header">
-        <div class="menu">
-            <a href="favorite.html" title="description" class="dropdown"><i class="fa fa-bars"></i></a> 
-            <nav class="conte">
-                <ul class="jilo">
-                    <li class="lili"><a href="../index.html" class="lino">home</a></li>
-                    <li class="lili"><a href="about.html"  class="lino">about me</a></li>
-                    
-                    <li class="lili"><a href="accomp.html"  class="lino">accomplishment</a></li>
-                    <li class="lili"><a href="favorite.html"  class="lino">my favorite</a></li>
-                    <li class="lili"><a href="contact.html"  class="lino">contact</a></li>
+<div class="bg-red-600">
+    <div class="flex items-center justify-end">
+        <div class="menu relative">
+            <input type="checkbox" id="menuToggle" class="hidden">
+            <label for="menuToggle" class="dropdown">
+                <i class="fa fa-bars"></i>
+            </label>
+            <nav class="menu-content hidden absolute right-0 w-40 py-2 mt-2 bg-white shadow-md">
+                <ul class="flex flex-col space-y-2 px-4">
+                    <li class="hover:bg-gray-100"><a href="./index.html" class="text-gray-700 hover:text-gray-900">home</a></li>
+                    <li class="hover:bg-gray-100"><a href=".about.html" class="text-gray-700 hover:text-gray-900">about me</a></li>
+                    <li class="hover:bg-gray-100"><a href="./accomp.html" class="text-gray-700 hover:text-gray-900">accomplishment</a></li>
+                    <li class="hover:bg-gray-100"><a href="./favorite.html" class="text-gray-700 hover:text-gray-900">my favorite</a></li>
+                    <li class="hover:bg-gray-100"><a href="./contact.html" class="text-gray-700 hover:text-gray-900">contact</a></li>
                 </ul>
-            </nav>  
+            </nav>
         </div>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuContent = document.querySelector('.menu-content');
+
+        menuToggle.addEventListener('change', function() {
+            if (this.checked) {
+                menuContent.classList.remove('hidden');
+            } else {
+                menuContent.classList.add('hidden');
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!menuContent.contains(event.target) && !menuToggle.contains(event.target)) {
+                menuToggle.checked = false;
+                menuContent.classList.add('hidden');
+            }
+        });
+    </script>
+           
         <div class="logo">
-            <h1 class="logo-txt"> <span class="span">Bori</span>Fan</h1>
+            <h1 class="logo-txt text-5xl font-bold"><span class="span">Bori</span>Fan</h1>
         </div>
-        </header>
+        <nav class="nav hidden md:flex md:flex-row-reverse">
+            <ul class="gul flex space-x-4">
+                <li class="lipop"><a href="./index.html" class="alibo">home</a></li>
+                <li class="lipop"><a href=".about.html" class="alibo">about me</a></li>
+                <li class="lipop"><a href="./accomp.html" class="alibo">accomplishment</a></li>
+                <li class="lipop"><a href="./favorite.html" class="alibo">my favorite</a></li>
+                <li class="lipop"><a href="./contact.html" class="alibo">contact</a></li>
+            </ul>
+        </nav>
+
+  
+
+    </header>
+</div>
+    <main class="bg-gray-100 py-1">
     <main class="favorite">
-        <section class="sec1">
-            <h1 class="favh1">My Favorite</h1>
-            <p class="text">
-            </p>
-            
-            <p class="text">
-         As someone who finds joy and fulfillment in supporting others and immersing myself in godly music, I experience a deep sense of purpose and contentment. Supporting individuals and being there for them in their times of need brings me great satisfaction, whether it's offering a listening ear, providing practical assistance, or offering words of encouragement. Knowing that I can make a positive difference in someone's life is incredibly rewarding. Additionally, when I engage with godly music, I feel a profound connection to the divine. The melodies and lyrics touch my heart and soul, filling me with inspiration, peace, and a sense of spiritual upliftment. The combination of supporting others and experiencing the power of godly music allows me to nurture my own well-being while bringing comfort and joy to those around me.
-            </p>
-            <h2 class="h2">My favorite musicians</h2>
-            <div>
-                <ul class="favul">
-                    <li>Lily Tilahun</li>
-                    <li>MESFIN GUTU</li>
-                    <li> Solomon Alemu</li>
-                    <li>Yisakor Niguse </li>
-                </ul>
-            </div>
-        </section>
+       <div class="flex">
+        <img src="./images/MY .jpg" alt="">
+        <aside class="bg-gray-200 p-4">
+            <section class="sec1">
+                <h1 class=" text-red-700 text-3xl font-bold">My Favorite</h1>
+                <p class="mt-4" >
+                    <p>
+                    As someone who finds joy and fulfillment in supporting others and immersing myself in godly music, I experience a deep sense of purpose and contentment. Supporting individuals and being there for them in their times of need brings me great satisfaction, whether it's offering a listening ear, providing practical assistance, or offering words of encouragement. Knowing that I can make a positive difference in someone's life is incredibly rewarding. Additionally, when I engage with godly music, I feel a profound connection to the divine. The melodies and lyrics touch my heart and soul, filling me with inspiration, peace, and a sense of spiritual upliftment. The combination of supporting others and experiencing the power of godly music allows me to nurture my own 
+                well-being while bringing comfort and joy to those around me.</p>
+                </p>
+                <h2 class="text-2xl font-bold mt-6">My favorite musicians</h2>
+                <div>
+                    <ul class="list-disc list-inside mt-4">
+                        <li>Lily Tilahun</li>
+                        <li>MESFIN GUTU</li>
+                        <li>Solomon Alemu</li>
+                        <li>Yisakor Niguse</li>
+                    </ul>
+                </div>
+            </section>
+          </aside>
+
+       </div>
         <aside class="schedule">
+           
+            <main class="w-1/4">
             <div class="video">
-                <img src="/images/MY .jpg"   alt="">
-                <iframe src="/images/MY god.mp4"  title="video" controls poster="../images/poster.jpg" class="favvid" ></iframe>
- 
-               
+                
+                <iframe src="./images/MY god.mp4" title="video" controls poster="../images/poster.jpg" class="w-full h-auto"></iframe>
             </div>
-            <h1 class="favh1">My weekend schedule</h1>
-            <table class="table">
+        </main>
+        
+            <h1 class="text-red-700 font-bold">My weekend schedule</h1>
+        
+            <table class="border-spacing-2">
                 <thead>
                     <tr>
-                        <th class="th">day</th>
-                        <th class="th">Saturday</th>
-                        <th class="th">Sunday</th>
+                        <th class="px-4 py-2">day</Here's the continuation:>
+
+
+                        <th class="px-4 py-2">activity</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="td">watch music</td>
-                        <td  class="td">9:00 am - 11:00 am </td>
-                        <td  class="td">7:00pm - 8:00pm</td>
+                        <td class="border px-4 py-2">Saturday</td>
+                        <td class="border px-4 py-2">Attend music concert</td>
                     </tr>
                     <tr>
-                        <td  class="td">reading fiction</td>
-                        <td  class="td">9:00 am - 11:00 am</td>
-                        <td  class="td">7:00pm - 8:00pm</td>
+                        <td class="border px-4 py-2">Sunday</td>
+                        <td class="border px-4 py-2">Relax and listen to music</td>
                     </tr>
                 </tbody>
             </table>
         </aside>
     </main>
-    <footer class="footer">
-        <div class="footer-copy"><i class="far fa-copyright">Bikila Tariku/AAiT</i></div>
-        <div class="footer-icon">
-            <ul class="fotul">
+</main>
+    <footer class="footer bg-gray-800 py-4 px-6 text-white">
+        <div class="footer-copy">&copy; Bikila Tariku/AAiT</div>
+        <div class="footer-icon flex justify-end">
+            <ul class="fotul flex space-x-4">
                 <li class="fotlin">
-                    <a href="https://www.facebook.com/me/" title="facebook" class="fb" target="_blank"><i class="fab fa-facebook">Fb</i></a></li>
-                <li  class="fotlin"><a  href="https://t.me/FFO100" title="telegram" class="tel" target="_blank"><i class="fab fa-telegram">Tg</i></a></li>
-               
+                    <a href="https://www.facebook.com/me/" title="facebook" class="fb" target="_blank"><i class="fab fa-facebook" style="font-size: 1.5em;"></i></a>
+                </li>
+                <li class="fotlin">
+                    <a href="https://t.me/FFO100" title="telegram" class="tel" target="_blank"><i class="fab fa-telegram" style="font-size: 1.5em;"></i></a>
+                </li>
+            </ul>
         </div>
     </footer>
-    
-
 </body>
 </html>
