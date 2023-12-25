@@ -2,65 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>
     <script src="https://kit.fontawesome.com/6909f688b3.js" crossorigin="anonymous"></script>
-    </head>
+</head>
 <body>
-    <header class="header">
-        <div class="menu">
-            <a href="contact.html" title="about" class="dropdown"><i class="fa fa-bars"></i></a> 
-            <nav class="conte">
-                <ul class="jilo">
-                    <li class="lili"><a href="../index.html" class="lino">home</a></li>
-                    <li class="lili"><a href="about.html"  class="lino">about me</a></li>
-                    <li class="lili"><a href="accomp.html"  class="lino">accomplishment</a></li>
-                    <li class="lili"><a href="favorite.html"  class="lino">my favorite</a></li>
-                    <li class="lili"><a href="contact.html"  class="lino">contact</a></li>
-                </ul>
-            </nav>   
+    
+<header class="header bg-info">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#" style="color: red; font-size: 20px;">BoriFan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color: red; font-size: 20px;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./accomp.html">Accomplishment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./favorite.html">My Favorite</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+       
+  <main class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <section>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="text" id="name" name="fname" placeholder="Your name..." class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Your email..." class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">Comment:</label>
+                            <textarea class="form-control" id="comment" name="comment" rows="5" placeholder="Your comment"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </section>
+            </div>
+            <div class="col-md-4">
+                <!-- Aside Content -->
+                <aside>
+                    <div class="container">
+                        <h2 class="mt-5 text-success">My Contact Information</h2>
+                        <ul class="list-group" style="height: 600px;";>
+                            <li class="list-group-item">
+                                <a href="mailto:bikilatariku810@gmai.com">bikilatariku810@gmail.com</a>
+                            </li>
+                            <li class="list-group-item">+251960314404</li>
+                            <li class="list-group-item">Telegram (@FFO100)</li>
+                            <li class="list-group-item">Facebook (Bikila Tariku)</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="my-element-height">
+    <!-- Content goes here -->
+    <footer class="footer bg-success">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="footer-copy">&copy; Bikila Tariku/AAiT</div>
+            <div class="fotul d-flex">
+              <li class="fotlin">
+                <a href="https://www.facebook.com/me/" title="facebook" class="fb" target="_blank">
+                  <i class="fab fa-facebook fa-lg me-2"></i>
+                </a>
+            
+              <li class="fotlin">
+                <a href="https://t.me/FFO100" title="telegram" class="tel" target="_blank">
+                  <i class="fab fa-telegram fa-lg"></i>
+                </a>
+              
+            </div>
           </div>
-        <div class="logo">
-            <h1 class="logo-txt"> <span class="span">Bori</span>Fan</h1>
         </div>
-         </header>
-    <main class="contact">
-        <section class="input">
-            <form>
-                <p> <label for="name">Name:</label>
-                    <input type="text" id="name" name="fname" placeholder="Your name..." class="input">
-                </p><br>
-                <p>
-                    <label for="email">email:</label>
-                    <input type="email" id="email" name="email" placeholder="Your email..." class="input">
-                </p><br>
-                <p>
-                    <label>comment:</label><br />
-                    <textarea class="area" for="submit" placeholder="your comment"></textarea><br>
-                    <input type="submit" value="submit" class="submit">
-                </p>
-            </form>
-        </section>
-        <aside class="info">
-            <h2 class="conh2">my contact information</h2>
-            <ul class="conul">
-                <li><a href="mailto:bikilatariku810@gmai.com" class="even">bikilatariku810@gmail.com</a></li>
-                <li>+251960314404</li>
-                <li>telegram(@FFO100)</li>
-                <li>facebook(Bikila Tariku)</li>
-            </ul>
-        </aside >
-    </main>
-    <footer class="footer">
-        <div class="footer-copy"><i class="far fa-copyright">Bikila Tariku/AAiT</i></div>
-        <div class="footer-icon">
-            <ul class="fotul">
-                <li class="fotlin">
-                    <a href="https://www.facebook.com/me/" title="facebook" class="fb" target="_blank"><i class="fab fa-facebook">Fb</i></a></li>
-                <li  class="fotlin"><a  href="https://t.me/FFO100" title="telegram" class="tel" target="_blank"><i class="fab fa-telegram">Tg</i></a></li>
-               
-        </div>
-    </footer>
+      </footer>
+</div>
+
 </body>
 </html>

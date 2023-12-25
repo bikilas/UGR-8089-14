@@ -2,62 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title> Home page </title>
-    
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>
     <script src="https://kit.fontawesome.com/6909f688b3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="menu">
-            <a href="index.html" title="home" class="dropdown"><i class="fa fa-bars"></i></a>   
-             <nav class="conte">
-                  
-                    <ul class="jilo">
-                        <li class="lili"><a href="index.html" class="lino">home</a></li>
-                        <li class="lili"><a href="html/about.html"  class="lino">about me</a></li>
-                      <li class="lili"><a href="html/accomp.html"  class="lino">accomplishment</a></li>
-                        <li class="lili"><a href="html/favorite.html"  class="lino">my favorite</a></li>
-                        <li class="lili"><a href="html/contact.html"  class="lino">contact</a></li>
-                        
-                    </ul>
-                         
-             </nav>  
-         </div>
-        <div class="logo">
-            <h1 class="logo-txt"> <span class="span"> Bori</span>Fan</h1>
-           
-      
-        </div>
-       
-       
-    </header>
-    <section class="chom">
+  
+<header class="header bg-info">
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#" style="color: red; font-size: 20px;">BoriFan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color: red; font-size: 20px;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./accomp.html">Accomplishment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./favorite.html">My Favorite</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+        <section class="chom">
             <article class="aho">
                 <figure class="hompic">
-                    <img src="/images/bikila.png"  alt="photo of me" class="hoimg">
+                    <img src="/images/bikila.png" alt="photo of me" class="img-fluid max-w-200">
+                  
                 </figure>
-                <h1 class="hh1">Wel Come To My Homepage</h1><br>
-                <p class="hopar">This website is designed by using the knowladge I aquired from the programming lesson regdarding the use of html and css effectively.
-                    In this website there is many information about me (Bikila Tariku) regarding my educational life.Well, I’m here to tell you that even a
-                    little knowledge of HTML and CSS can make a big difference in your career. And learning tech isn’t just for the production assistants
-                    and print designers of the world—whether you’re a small business owner, a sales manager, an event coordinator, or even a magician,
-                    you can benefit from some HTML and CSS chops.
-                </p>
-            </article>
-    </section>
-    <footer class="footer">
-        <div class="footer-copy"><i class="far fa-copyright">Bikila Tariku/AAiT</i></div>
-        <div class="footer-icon">
-            <ul class="fotul">
+                <section class="my-element">
+                  <h1 class="text-danger ">Welcome To My Homepage</h1><br>
+                  <p class="">This website is designed by using the knowledge I acquired from the programming lessons regarding the use of HTML and CSS effectively. In this website, there is much information about me (Bikila Tariku) regarding my educational life. Well, I’m here to tell you that even a little knowledge of HTML and CSS can make a big difference in your career. And learning tech isn’t just for the production assistants and print designers of the world—whether you’re a small business owner, a sales manager, an event coordinator, or even a magician, you can benefit from some HTML and CSS chops.</p>
+    
+                </section>
+                         </article>
+        </section>
+        <footer class="footer bg-success style="margin-bottom: 0; height: 100px;>
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="footer-copy">&copy; Bikila Tariku/AAiT</div>
+              <div class="fotul d-flex">
                 <li class="fotlin">
-                    <a href="https://www.facebook.com/me/" title="facebook" class="fb" target="_blank"><i class="fab fa-facebook">fb</i></a></li>
-                <li  class="fotlin"><a  href="https://t.me/FFO100" title="telegram" class="tel" target="_blank"><i class="fab fa-telegram">Tg</i></a></li>
-               
-        </div>
-    </footer>
+                  <a href="https://www.facebook.com/me/" title="facebook" class="fb" target="_blank">
+                    <i class="fab fa-facebook fa-lg me-2"></i>
+                  </a>
+              
+                <li class="fotlin">
+                  <a href="https://t.me/FFO100" title="telegram" class="tel" target="_blank">
+                    <i class="fab fa-telegram fa-lg"></i>
+                  </a>
+                
+              </div>
+            </div>
+          </div>
+        </footer>
+        
 </body>
 </html>
-
